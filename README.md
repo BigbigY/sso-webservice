@@ -8,4 +8,4 @@
 ```
 请严格按照上边的执行顺序执行，项目中修改了beego代码，所以，只能使用vendor中的beego代码才有效。
 
-数据库配置方式，请参考：(https://github.com/asofdate/hauth)[https://github.com/asofdate/hauth]
+数据库配置方式，请参考：[https://github.com/asofdate/hauth](https://github.com/asofdate/hauth)
