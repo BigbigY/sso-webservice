@@ -86,7 +86,7 @@
         add:function(){
             $.Hmodal({
                 body:$("#org_input_form").html(),
-                height:"300px",
+                width:"420px",
                 header:"新增机构",
                 callback:function(hmode){
                     $.HAjaxRequest({
@@ -161,7 +161,7 @@
             $.Hmodal({
                 body:$("#org_modify_form").html(),
                 header:"修改机构信息",
-                height:"360px",
+                width:"420px",
                 preprocess:function () {
                     /*
                      * 初始化下拉框中机构信息
@@ -227,7 +227,6 @@
         edit:function(){
 
             var row = OrgObj.$table.bootstrapTable("getSelections").concat();
-
             if (row.length == 0){
                 var selected_id = $("#h-org-tree-info-list").attr("data-selected");
                 if (selected_id == undefined){
@@ -261,7 +260,7 @@
             var search = function(obj,arr){
                 $(arr).each(function(index,element){
                     if (obj.org_id == element.up_org_id){
-                        addArray.push(element)
+                        addArray.push(element);
                         var newArray = all.splice(index,1)
                         search(element,newArray)
                     }
@@ -417,43 +416,39 @@
 
 <script type="text/html" id="org_input_form">
     <form class="row"  id="h-org-add-info">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="form-group-sm col-sm-6 col-md-6 col-lg-6">
-                <label class="h-label" style="width:100%;">组织部门代码：</label>
-                <input placeholder="请输入1-30位数字，字母（必填）" name="Org_unit_id" type="text" class="form-control" style="width: 100%;height: 30px;line-height: 30px;">
-            </div>
-            <div class="form-group-sm col-sm-6 col-md-6 col-lg-6">
-                <label class="h-label" style="width: 100%;">组织部门名称：</label>
-                <input placeholder="请输入1-60位汉字，字母，数字（必填）" type="text" class="form-control" name="Org_unit_desc" style="width: 100%;height: 30px;line-height: 30px;">
-            </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12">
+            <label class="h-label" style="width:100%;">组织部门代码：</label>
+            <input placeholder="请输入1-30位数字，字母（必填）" name="Org_unit_id" type="text" class="form-control" style="width: 100%;height: 30px;line-height: 30px;">
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
-            <div class="form-group-sm col-sm-6 col-md-6 col-lg-6">
-                <label class="h-label" style="width: 100%;">所属域：</label>
-                <select id="h-org-domain-up-id" name="Domain_id" style="width: 100%;height: 30px;line-height: 30px;">
-                </select>
-            </div>
-            <div class="form-group-sm col-sm-6 col-md-6 col-lg-6">
-                <label class="h-label" style="width: 100%;">上级组织部门代码：</label>
-                <select id="h-org-up-id" name="Up_org_id" style="width: 100%;height: 30px;line-height: 30px;">
-                </select>
-            </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 23px">
+            <label class="h-label" style="width: 100%;">组织部门名称：</label>
+            <input placeholder="请输入1-60位汉字，字母，数字（必填）" type="text" class="form-control" name="Org_unit_desc" style="width: 100%;height: 30px;line-height: 30px;">
+        </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 23px">
+            <label class="h-label" style="width: 100%;">所属域：</label>
+            <select id="h-org-domain-up-id" name="Domain_id" style="width: 100%;height: 30px;line-height: 30px;">
+            </select>
+        </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 23px">
+            <label class="h-label" style="width: 100%;">上级组织部门代码：</label>
+            <select id="h-org-up-id" name="Up_org_id" style="width: 100%;height: 30px;line-height: 30px;">
+            </select>
         </div>
     </form>
 </script>
 
 <script type="text/html" id="org_modify_form">
     <form id="h-org-modify-info">
-        <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 12px">
             <label class="h-label" style="width:100%;">组织部门代码：</label>
             <input id="h-modify-org-code" readonly="readonly" placeholder="user id" name="Org_unit_id" type="text" class="form-control" style="width: 100%;height: 30px;line-height: 30px;background-color: transparent">
             <input id="h-modify-org-id" readonly="readonly" placeholder="user id" name="Id" type="text" class="form-control" style="width: 100%;height: 30px;line-height: 30px;background-color: transparent;display: none;">
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 18px;">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 23px;">
             <label class="h-label" style="width: 100%;">组织部门名称：</label>
             <input id="h-modify-org-name" placeholder="user name" type="text" class="form-control" name="Org_unit_desc" style="width: 100%;height: 30px;line-height: 30px;">
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 18px;">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 23px;">
             <label class="h-label" style="width: 100%;">上级组织部门代码：</label>
             <select id="h-modify-org-up-id" name="Up_org_id" style="width: 100%;height: 30px;line-height: 30px;">
             </select>

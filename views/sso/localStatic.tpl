@@ -70,7 +70,8 @@
             $.Hmodal({
                 header:"编辑静态路由信息",
                 body:$("#h-sso-local-static-form-src").html(),
-                height:"300px",
+                height:"360px",
+                width:"420px",
                 callback:function (hmode) {
                     $.HAjaxRequest({
                         url:"/v1/sso/local/static",
@@ -97,7 +98,8 @@
             $.Hmodal({
                 header:"新增静态路由信息",
                 body:$("#h-sso-local-static-form-src").html(),
-                height:"300px",
+                height:"360px",
+                width:"420px",
                 callback:function (hmode) {
                     $.HAjaxRequest({
                         url:"/v1/sso/local/static",
@@ -154,11 +156,11 @@
 
 <script id="h-sso-local-static-form-src" type="text/html">
     <form id="h-sso-local-static-form-table">
-        <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 12px">
             <span>路由地址</span>
             <input placeholder="url地址" name="url" class="form-control" style="height: 30px; line-height: 30px;"/>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 23px;">
             <span>本地路径</span>
             <input placeholder="本地相对路径" name="path" class="form-control" style="height: 30px; line-height: 30px;" />
         </div>

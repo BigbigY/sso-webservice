@@ -31,27 +31,37 @@
             }
             x.send();
         },
-        showHandleLogDetails:function(val){
-            var optHtml = '<div class="panel panel-default"><table class="table table-striped table-bordered table-condensed">'
-            optHtml += "<tr><th class='col-sm-2 col-md-2 col-lg-2'>key</th><th>value</th></tr>"
-            var st = val.split("&")
+        showHandleLogDetails:function(obj){
 
-            for(var i = 0 ; i < st.length;i++){
-                var keyval = st[i].split("=")
-                if (keyval.length==2){
-                    if (keyval[0]=="JSON"){
-                        console.log(JSON.stringify(decodeURI(keyval[1])))
+            var optHtml = '<div class="panel panel-default"><table class="table table-striped table-bordered table-condensed">'
+            optHtml += "<tr><th class='col-sm-2 col-md-2 col-lg-2' valign='middle'>key</th><th valign='middle'>value</th></tr>"
+            var row = JSON.parse($(obj).html());
+            for (var x in row) {
+                try {
+                    var drow = JSON.parse(row[x]);
+                    var dt = "";
+                    for (var i = 0; i < drow.length; i++) {
+                        if (i > 0) {
+                            dt += "<hr/>";
+                        }
+                        for (var y in drow[i]) {
+                            dt += y + " = " + drow[i][y] + "<br/>";
+                        }
                     }
-                    optHtml += "<tr><td>"+keyval[0]+"</td><td>"+decodeURI(keyval[1])+"</td></tr>"
+                    if (dt == "") {
+                        dt = drow;
+                    }
+                    optHtml += "<tr style='vertical-align:middle !important;'><td valign='middle'>" + x + "</td><td>" + dt + "</td></tr>";
+                } catch (e) {
+                    optHtml += "<tr style='vertical-align:middle !important;'><td valign='middle'>" + x + "</td><td>" + row[x] + "</td></tr>";
                 }
             }
-            optHtml += "</table></div>"
-
+            optHtml += "</table></div>";
             $.Hmodal({
-                header:"客户端发送到服务器的参数信息",
-                body:optHtml,
-                height:"360px",
-                submitBtn:false,
+                header: "客户端发送到服务器的参数信息",
+                body: optHtml,
+                height: "420px",
+                submitBtn: false,
             })
         },
         search:function(){
@@ -178,14 +188,10 @@
                         sortable: false,
 
                         formatter:function(value,rows,index){
-                            if (value.length>30){
-                                return '<span ondblclick=LogsHandle.showHandleLogDetails("'+value+'") >'+value.substring(0,30)+'......'+'</span>'
-                            }else{
-                                return '<span ondblclick=LogsHandle.showHandleLogDetails("'+value+'") >'+value.substring(0,30)+'</span>'
-                            }
+                            return '<span ondblclick=LogsHandle.showHandleLogDetails()>'+value+'</span>'
                         }
                     }]
-                }).closest(".bootstrap-table").find(".columns-right").hide();
+                });
                 $(hmode).remove();
             };
             $.Hmodal({
@@ -205,13 +211,10 @@
                 striped: true,
                 pagination: true,
                 pageList:[40,80,160,400,800,3000],
-                showRefresh:true,
+                showRefresh:false,
                 pageSize: 80,
-                showExport:false,
                 search:false,
                 sidePagination: "server",
-                showColumns: true,
-                minimunCountColumns: 2,
                 columns:[{
 
                     field: 'uuid',
@@ -270,7 +273,7 @@
 
                     align: 'left',
 
-                    valign: 'top',
+                    valign: 'middle',
 
                     sortable: false
 
@@ -308,17 +311,15 @@
 
                     valign: 'middle',
 
+                    width: "360px",
+
                     sortable: false,
 
                     formatter:function(value,rows,index){
-                        if (value.length>30){
-                            return '<span ondblclick=LogsHandle.showHandleLogDetails("'+value+'") >'+value.substring(0,30)+'......'+'</span>'
-                        }else{
-                            return '<span ondblclick=LogsHandle.showHandleLogDetails("'+value+'") >'+value.substring(0,30)+'</span>'
-                        }
+                        return '<span ondblclick=LogsHandle.showHandleLogDetails(this) >'+value+'</span>'
                     }
                 }]
-            }).closest(".bootstrap-table").find(".columns-right").hide();
+            });
         }
     };
 

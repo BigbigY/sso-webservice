@@ -181,7 +181,7 @@
                 callback:submitMenu,
                 header:"新增域信息",
                 body:$("#domain_input_form").html(),
-                height:"360px",
+                width:"420px",
                 preprocess:function () {
                     $("#h-domain-add-status").Hselect({
                         height:"30px",
@@ -287,7 +287,7 @@
                     preprocess:preHand,
                     header:"修改域信息",
                     body:$("#domain_input_form").html(),
-                    height:"360px",
+                    width:"420px",
                 })
             }
         },
@@ -300,25 +300,21 @@
 
 
 <script id="domain_input_form" type="text/html">
-    <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px">
-        <form class="form-horizontal" id="h-domain-add-tpl">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="form-group-sm col-sm-12 col-md-12 col-lg-12">
-                    <label class="h-label" style="width:100%;">域编码：</label>
-                    <input placeholder="1至30个字母，数字组成" name="domainId" type="text" class="form-control" style="width: 100%;height: 30px;line-height: 30px;">
-                </div>
-                <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
-                    <label class="h-label" style="width: 100%;">域描述：</label>
-                    <input placeholder="1至30个汉字、字母、数字组成" type="text" class="form-control" name="domainDesc" style="width: 100%;height: 30px;line-height: 30px;">
-                </div>
-                <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
-                    <label class="h-label" style="width: 100%;">状　态：</label>
-                    <select id="h-domain-add-status" name="domainStatus"  class="form-control" style="width: 100%;height: 30px;line-height: 30px;">
-                        <option value="0">正常</option>
-                        <option value="1">失效</option>
-                    </select>
-                </div>
-            </div>
-        </form>
-    </div>
+    <form class="form-horizontal" id="h-domain-add-tpl">
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12">
+            <label class="h-label" style="width:100%;">域编码：</label>
+            <input placeholder="1至30个字母，数字组成" name="domainId" type="text" class="form-control" style="width: 100%;height: 30px;line-height: 30px;">
+        </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 23px;">
+            <label class="h-label" style="width: 100%;">域描述：</label>
+            <input placeholder="1至30个汉字、字母、数字组成" type="text" class="form-control" name="domainDesc" style="width: 100%;height: 30px;line-height: 30px;">
+        </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 23px;">
+            <label class="h-label" style="width: 100%;">状　态：</label>
+            <select id="h-domain-add-status" name="domainStatus"  class="form-control" style="width: 100%;height: 30px;line-height: 30px;">
+                <option value="0">正常</option>
+                <option value="1">失效</option>
+            </select>
+        </div>
+    </form>
 </script>

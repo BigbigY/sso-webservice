@@ -73,8 +73,8 @@
             $.Hmodal({
                 header:"编辑子系统路由映射配置信息",
                 body:$("#h-sso-remote-api-src").html(),
-                height:"430px",
-                width:"600px",
+                height:"490px",
+                width:"420px",
                 callback:function (hmode) {
                     $.HAjaxRequest({
                         url:"/v1/sso/proxy/api",
@@ -119,8 +119,8 @@
             $.Hmodal({
                 header:"新增子系统路由映射关系",
                 body:$("#h-sso-remote-api-src").html(),
-                height:"430px",
-                width:"600px",
+                height:"490px",
+                width:"420px",
                 callback:function (hmode) {
                     $.HAjaxRequest({
                         url:"/v1/sso/proxy/api",
@@ -195,20 +195,20 @@
 
 <script id="h-sso-remote-api-src" type="text/html">
     <form id="h-sso-remote-api-form">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <span>路由地址</span>
-            <input name="registerUrl" class="form-control" style="height: 30px; line-height: 30px;"/>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <span>路由描述</span>
-            <input name="routeDesc" class="form-control" style="height: 30px; line-height: 30px;"/>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 12px;">
             <span>子系统</span>
             <select name="serviceCd" class="form-control" style="height: 30px; line-height: 30px;">
             </select>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 23px;">
+            <span>路由地址</span>
+            <input placeholder="注册地址，如：/v1/sso/user" name="registerUrl" class="form-control" style="height: 30px; line-height: 30px;"/>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 23px;">
+            <span>路由描述</span>
+            <input placeholder="给路由取个名字吧" name="routeDesc" class="form-control" style="height: 30px; line-height: 30px;"/>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 23px;">
             <span>映射子系统路由</span>
             <input placeholder="如：127.0.0.1" name="remoteUrl" class="form-control" style="height: 30px; line-height: 30px;" />
         </div>

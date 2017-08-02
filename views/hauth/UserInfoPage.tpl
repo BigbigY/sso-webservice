@@ -243,7 +243,7 @@
                 $.Hmodal({
                     header:"修改用户信息",
                     body:$("#modify-user-info").html(),
-                    height:"360px",
+                    width:"420px",
                     preprocess:function () {
                         var domain_id = $("#h-user-domain-list").val()
                         $.getJSON("/v1/auth/resource/org/get",{domain_id:domain_id},function(data){
@@ -305,7 +305,7 @@
             $.Hmodal({
                 header:"重置用户密码信息",
                 body:$("#h-modify-password").html(),
-                height:"360px",
+                width:"420px",
                 preprocess:function () {
                     $("#h-modify-user-password").val(user_id)
                 },
@@ -330,7 +330,7 @@
             $.Hmodal({
                 header:"修改用户状态",
                 body:$("#modify-user-status").html(),
-                height:"360px",
+                width:"420px",
                 preprocess:function () {
                     $("#h-modify-user-status-user-id").val(user_id)
                     $("#h-modify-user-status-user-name").val(user_name)
@@ -477,32 +477,26 @@
 <!--修改用户信息框-->
 <script type="text/html" id="modify-user-info">
     <form class="row" id="h-user-modify-info">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="form-group-sm col-sm-6 col-md-6 col-lg-6">
-                <label class="h-label" style="width:100%;">账　号：</label>
-                <input placeholder="user id" name="userId" type="text" class="form-control" style="width: 100%;height: 30px;line-height: 30px; background-color: #f5f5f5;">
-            </div>
-            <div class="form-group-sm col-sm-6 col-md-6 col-lg-6">
-                <label class="h-label" style="width: 100%;">名　称：</label>
-                <input placeholder="user name" type="text" class="form-control" name="userDesc" style="width: 100%;height: 30px;line-height: 30px;">
-            </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12">
+            <label class="h-label" style="width:100%;">账　号：</label>
+            <input placeholder="user id" name="userId" type="text" class="form-control" style="width: 100%;height: 30px;line-height: 30px; background-color: #f5f5f5;">
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 8px;">
-            <div class="form-group-sm col-sm-6 col-md-6 col-lg-6">
-                <label class="h-label" style="width: 100%;">邮　箱：</label>
-                <input placeholder="user email" name="userEmail" type="text" class="form-control" style="width: 100%;height: 30px;line-height: 30px;">
-            </div>
-            <div class="form-group-sm col-sm-6 col-md-6 col-lg-6">
-                <label class="h-label" style="width: 100%;">手机号：</label>
-                <input placeholder="user phone number" name="userPhone" type="text" class="form-control" style="width: 100%;height: 30px;line-height: 30px;">
-            </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 12px;">
+            <label class="h-label" style="width: 100%;">名　称：</label>
+            <input placeholder="user name" type="text" class="form-control" name="userDesc" style="width: 100%;height: 30px;line-height: 30px;">
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 8px;">
-            <div class="form-group-sm col-sm-6 col-md-6 col-lg-6">
-                <label class="h-label" style="width: 100%;">机　构：</label>
-                <select id="h-modify-org-id" name="orgId" style="width: 100%;height: 30px;line-height: 30px;padding: 0px;">
-                </select>
-            </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 12px;">
+            <label class="h-label" style="width: 100%;">机　构：</label>
+            <select id="h-modify-org-id" name="orgId" style="width: 100%;height: 30px;line-height: 30px;padding: 0px;">
+            </select>
+        </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 12px;">
+            <label class="h-label" style="width: 100%;">邮　箱：</label>
+            <input placeholder="user email" name="userEmail" type="text" class="form-control" style="width: 100%;height: 30px;line-height: 30px;">
+        </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 12px;">
+            <label class="h-label" style="width: 100%;">手机号：</label>
+            <input placeholder="user phone number" name="userPhone" type="text" class="form-control" style="width: 100%;height: 30px;line-height: 30px;">
         </div>
     </form>
 </script>

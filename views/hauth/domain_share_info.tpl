@@ -79,7 +79,7 @@
            $.Hmodal({
                header:"共享域信息",
                body:$("#domain-share-input-form").html(),
-               height:"320px",
+               width:"420px",
                preprocess:function () {
 
                    //获取列表中被授权访问的域信息
@@ -139,7 +139,7 @@
                 $.Hmodal({
                     header:"修改域分享模式",
                     body:$("#domain-share-modify-form").html(),
-                    height:"320px",
+                    width:"420px",
                     preprocess:function(){
                         //获取列表中被授权访问的域信息
                         $("#h-domain-share-target-modify-domain-id").val(sel[0].target_domain_id)
@@ -275,46 +275,38 @@
 </script>
 
 <script id="domain-share-input-form" type="text/html">
-    <div class="col-sm-12 col-md-12 col-lg-12">
-        <form class="form-horizontal" id="h-domain-share-add-tpl">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
-                    <label class="h-label" style="width: 100%;">共享目标：</label>
-                    <select id="h-domain-share-target-domain-id" name="target-domain-id"  class="form-control"
-                            style="width: 100%;padding: 0px;">
-                    </select>
-                </div>
-                <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
-                    <label class="h-label" style="width: 100%;">共享模式：</label>
-                    <select id="h-domain-share-auth-level" name="auth-level"  class="form-control"
-                            style="width: 100%; padding:0px;">
-                        <option value="1">只读</option>
-                        <option value="2">读写</option>
-                    </select>
-                </div>
-            </div>
-        </form>
-    </div>
+    <form id="h-domain-share-add-tpl">
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 6px;">
+            <label class="h-label" style="width: 100%;">共享目标：</label>
+            <select id="h-domain-share-target-domain-id" name="target-domain-id"  class="form-control"
+                    style="width: 100%;padding: 0px;">
+            </select>
+        </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 12px;">
+            <label class="h-label" style="width: 100%;">共享模式：</label>
+            <select id="h-domain-share-auth-level" name="auth-level"  class="form-control"
+                    style="width: 100%; padding:0px;">
+                <option value="1">只读</option>
+                <option value="2">读写</option>
+            </select>
+        </div>
+    </form>
 </script>
 
 <script id="domain-share-modify-form" type="text/html">
-    <div class="col-sm-12 col-md-12 col-lg-12">
-        <form class="form-horizontal" id="h-domain-share-modify-tpl">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
-                    <label class="h-label" style="width: 100%;">共享目标：</label>
-                    <input readonly="readonly" id="h-domain-share-target-modify-domain-id" name="target-domain-id"  class="form-control"
-                            style="width: 100%;height:30px;line-height:30px;" />
-                </div>
-                <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
-                    <label class="h-label" style="width: 100%;">共享模式：</label>
-                    <select id="h-domain-share-modify-auth-level" name="auth-level"  class="form-control"
-                            style="width: 100%; padding:0px;">
-                        <option value="1">只读</option>
-                        <option value="2">读写</option>
-                    </select>
-                </div>
-            </div>
-        </form>
-    </div>
+    <form class="form-horizontal" id="h-domain-share-modify-tpl">
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 6px;">
+            <label class="h-label" style="width: 100%;">共享目标：</label>
+            <input readonly="readonly" id="h-domain-share-target-modify-domain-id" name="target-domain-id"  class="form-control"
+                   style="width: 100%;height:30px;line-height:30px;" />
+        </div>
+        <div class="form-group-sm col-sm-12 col-md-12 col-lg-12" style="margin-top: 12px;">
+            <label class="h-label" style="width: 100%;">共享模式：</label>
+            <select id="h-domain-share-modify-auth-level" name="auth-level"  class="form-control"
+                    style="width: 100%; padding:0px;">
+                <option value="1">只读</option>
+                <option value="2">读写</option>
+            </select>
+        </div>
+    </form>
 </script>

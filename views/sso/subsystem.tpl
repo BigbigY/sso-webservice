@@ -74,7 +74,7 @@
             $.Hmodal({
                 header:"编辑子系统配置信息",
                 body:$("#h-sso-subsystem-src").html(),
-                width:"600px",
+                width:"420px",
                 height:"490px",
                 callback:function (hmode) {
                     $.HAjaxRequest({
@@ -107,7 +107,7 @@
             $.Hmodal({
                 header:"新增子系统配置信息",
                 body:$("#h-sso-subsystem-src").html(),
-                width:"600px",
+                width:"420px",
                 height:"490px",
                 callback:function (hmode) {
                     $.HAjaxRequest({
