@@ -44,6 +44,7 @@
                 <th data-field="remoteScheme">协议</th>
                 <th data-field="remoteHost">主机名</th>
                 <th data-field="remotePort">端口</th>
+                <th data-field="prefixUrl">基准路径</th>
                 <th data-align="center" data-field="createTime">创建日期</th>
                 <th data-align="center" data-field="createUser">创建人</th>
                 <th data-align="center" data-field="modifyTime">修改日期</th>
@@ -96,6 +97,7 @@
                     $("#h-sso-subsystem-form").find("input[name='serviceName']").val(row.serviceName);
                     $("#h-sso-subsystem-form").find("input[name='remoteHost']").val(row.remoteHost);
                     $("#h-sso-subsystem-form").find("input[name='remotePort']").val(row.remotePort);
+                    $("#h-sso-subsystem-form").find("input[name='prefixUrl']").val(row.prefixUrl);
                     $("#h-sso-subsystem-form").find("select[name='remoteScheme']").Hselect({
                         height:"30px",
                         value:row.remoteScheme,
@@ -178,24 +180,28 @@
             <span>子系统编码</span>
             <input placeholder="由1-30位字母、数字组成" name="serviceCd" class="form-control" style="height: 30px; line-height: 30px;"/>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 8px;">
             <span>子系统名称</span>
             <input placeholder="给系统取个洋气的名字吧" name="serviceName" class="form-control" style="height: 30px; line-height: 30px;" />
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 8px;">
             <span>协议</span>
             <select name="remoteScheme" class="form-control" style="height: 30px; line-height: 30px;">
                 <option value="http" selected>http</option>
                 <option value="https" selected>https</option>
             </select>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 8px;">
             <span>主机名</span>
             <input placeholder="如：127.0.0.1" name="remoteHost" class="form-control" style="height: 30px; line-height: 30px;" />
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px;">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 8px;">
             <span>端口号</span>
             <input placeholder="如：8080" name="remotePort" class="form-control" style="height: 30px; line-height: 30px;" />
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 8px;">
+            <span>基准路径</span>
+            <input placeholder="如：/AM" name="prefixUrl" class="form-control" style="height: 30px; line-height: 30px;" />
         </div>
     </form>
 </script>
