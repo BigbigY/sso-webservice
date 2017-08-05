@@ -9,7 +9,7 @@
 
 **码云下载地址**
 ```go
-    go get git.oschina.net/hzwy23/vendor
+    go get github.com/asofdate/vender
     go get git.oschina.net/hzwy23/sso-webservice
 ```
 
