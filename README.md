@@ -1,10 +1,18 @@
 ## sso-webservice 单点登录解决方案
 
-## 源码获取方式
+## 源码获取方式，任选其一
+**Github下载地址：**
 ```go
     go get github.com/asofdate/vender
     go get github.com/asofdate/sso-webservice
 ```
+
+**码云下载地址**
+```go
+    go get git.oschina.net/hzwy23/vendor
+    go get git.oschina.net/hzwy23/sso-webservice
+```
+
 请严格按照上边的执行顺序执行，项目中修改了beego代码，所以，只能使用vendor中的beego代码才有效。
 
 ## 项目简介
