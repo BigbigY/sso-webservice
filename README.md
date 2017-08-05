@@ -19,12 +19,14 @@ sso-webservice目标是使多个系统单点登录，实现系统集成。用户
 sso-webservice目前使用的数据库为MySQL，如果需要支持其他数据库，需要添加相应数据库的驱动，以及sql配置文件。
 
 **导入数据文件**
+
 数据文件在sso-jwt-auth/script/init_hauth.sql。 如将数据导入本地数据库sso中
 ```shell
     mysql -uroot -p sso < ./init_hauth.sql
 ```
 
 **修改数据库配置**
+
 数据库配置信息在sso-webservice/conf/asofdate.conf中
 ```
 # 数据库类型，目前默认是mysql
