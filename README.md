@@ -70,6 +70,13 @@ go build
 2. 数据用户名： admin, 密码： hzwy23
 
 
+## 演示地址
+http://www.asofdate.com:8090
+
+用户： admin
+
+密码： hzwy23
+
 ## 交流方式
 e-mail：hzwy23@163.com
 
