@@ -26,31 +26,29 @@
 </div>
 
 
-<div class="row">
-    <div id="h-grant-user-table-show" class="col-sm-12 col-md-12 col-lg-12">
-        <table id="h-grant-info-table-details"
-               data-toggle="table"
-               data-striped="true"
-               data-url="/v1/auth/user/get"
-               data-side-pagination="client"
-               data-pagination="true"
-               data-page-list="[20, 50, 100, 200]"
-               data-search="false">
-            <thead>
-            <tr>
-                <th data-field="state" data-checkbox="true"></th>
-                <th data-field="user_id" data-sortable="true">账户</th>
-                <th data-field="user_name">用户名称</th>
-                <th data-field="org_unit_desc" data-sortable="true">机构</th>
-                <th data-width="160px" data-align="center" data-field="user_phone">手机号</th>
-                <th data-field="user_email">邮箱</th>
-                <th data-field="modify_user" data-sortable="true">修改人</th>
-                <th data-field="modify_date" data-sortable="true">修改时间</th>
-                <th data-align="center" data-formatter="AuthObj.formatterHandle">操作</th>
-            </tr>
-            </thead>
-        </table>
-    </div>
+<div id="h-grant-user-table-show" class="subsystem-content">
+    <table id="h-grant-info-table-details"
+           data-toggle="table"
+           data-striped="true"
+           data-url="/v1/auth/user/get"
+           data-side-pagination="client"
+           data-pagination="true"
+           data-page-list="[20, 50, 100, 200]"
+           data-search="false">
+        <thead>
+        <tr>
+            <th data-field="state" data-checkbox="true"></th>
+            <th data-field="user_id" data-sortable="true">账户</th>
+            <th data-field="user_name">用户名称</th>
+            <th data-field="org_unit_desc" data-sortable="true">机构</th>
+            <th data-width="160px" data-align="center" data-field="user_phone">手机号</th>
+            <th data-field="user_email">邮箱</th>
+            <th data-field="modify_user" data-sortable="true">修改人</th>
+            <th data-field="modify_date" data-sortable="true">修改时间</th>
+            <th data-align="center" data-formatter="AuthObj.formatterHandle">操作</th>
+        </tr>
+        </thead>
+    </table>
 </div>
 
 <script type="text/javascript">

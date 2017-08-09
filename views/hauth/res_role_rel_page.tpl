@@ -22,8 +22,8 @@
         </button>
     </div>
 </div>
-<div class="row" style="background-image: url('/static/images/hauth/pure_book.png');filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')';-moz-background-size:100% 100%;background-size:100% 100%;">
-    <div id="h-domain-share-info-details">
+<div class="subsystem-content" style="background-image: url('/static/images/hauth/pure_book.png');filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')';-moz-background-size:100% 100%;background-size:100% 100%;">
+    <div id="h-domain-share-info-details" class="row">
         <div class="col-sm-6 col-md-6 col-lg-6" style="padding-left: 10%; padding-right: 2%;">
             <div class="col-ms-12 col-md-12 col-lg-12" style="margin-top: 3%">
                 <div style="border-bottom: #598f56 solid 1px;height: 44px; line-height: 44px;">

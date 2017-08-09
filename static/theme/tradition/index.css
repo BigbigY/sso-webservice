@@ -1,13 +1,12 @@
 .hzwy23-theme-background {
-    /*background-color: #025e99;*/
-    background-image: url('/static/theme/blue/bg_image.jpg');
+    background-image: url('/static/theme/default/bg_image.jpg');
     filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')';
     -moz-background-size:100% 100%;
     background-size:100% 100%;
 }
 
 .theme-tab-color {
-    background-color: #025e99;
+    background-color: #009966;
 }
 
 /*
@@ -139,23 +138,23 @@
 }
 
 .active-tab {
-    background-color: #009999;
+    background-color: #006699;
     color: #e1e4e9;
 }
 
 .active-tab:hover {
-    background-color: #009999;
+    background-color: #006699;
     color: #ffffff;
 }
 
 /*结束tab标签样式*/
-
 .subsystem-header {
     height: 40px;
     line-height: 40px;
     border-bottom: solid #e6e6e6 1px;
     vertical-align: middle;
     margin: auto 0px;
+    width:100%;
 }
 
 .subsystem-toolbar {
@@ -165,6 +164,7 @@
     /*border-bottom: solid #e6e6e6 1px;*/
     margin: auto 0px;
     background-color: #fcfcfc;
+    width: 100%;
 }
 
 .subsystem-content{

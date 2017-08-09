@@ -35,40 +35,35 @@
         </button>
     </div>
 </div>
-
-<div id="h-user-show-box">
-
-        <table id="h-user-info-table-details"
-               class="table"
-               data-toggle="table"
-               data-unique-id="user_id"
-               data-toolbar="#h-user-toolbar-list"
-               data-side-pagination="client"
-               data-pagination="true"
-               data-striped="true"
-               data-show-refresh="false"
-               data-page-list="[20, 50, 100, 200]"
-               data-search="false">
-            <thead>
-            <tr>
-                <th data-field="state" data-checkbox="true"></th>
-                <th data-field="user_id" data-sortable="true">账户</th>
-                <th data-field="user_name">用户名称</th>
-                <th data-align="center" data-field="status_desc">状态</th>
-                <th data-field="org_unit_desc" data-sortable="true">机构</th>
-                <th data-align="center" data-field="user_phone">手机号</th>
-                <th data-field="user_email">邮箱</th>
-                <th data-align="center" data-field="create_user">创建人</th>
-                <th data-align="center" data-field="create_date" data-sortable="true">创建时间</th>
-                <th data-align="center" data-field="modify_user">修改人</th>
-                <th data-align="center" data-field="modify_date" data-sortable="true">修改时间</th>
-                <th data-align="center" data-formatter="UserObj.formatter">操作</th>
-            </tr>
-            </thead>
-        </table>
-
+<div id="h-user-show-box" class="subsystem-content">
+    <table id="h-user-info-table-details"
+           class="table"
+           data-toggle="table"
+           data-unique-id="user_id"
+           data-side-pagination="client"
+           data-pagination="true"
+           data-striped="true"
+           data-show-refresh="false"
+           data-page-list="[20, 50, 100, 200]"
+           data-search="false">
+        <thead>
+        <tr>
+            <th data-field="state" data-checkbox="true"></th>
+            <th data-field="user_id" data-sortable="true">账户</th>
+            <th data-field="user_name">用户名称</th>
+            <th data-align="center" data-field="status_desc">状态</th>
+            <th data-field="org_unit_desc" data-sortable="true">机构</th>
+            <th data-align="center" data-field="user_phone">手机号</th>
+            <th data-field="user_email">邮箱</th>
+            <th data-align="center" data-field="create_user">创建人</th>
+            <th data-align="center" data-field="create_date" data-sortable="true">创建时间</th>
+            <th data-align="center" data-field="modify_user">修改人</th>
+            <th data-align="center" data-field="modify_date" data-sortable="true">修改时间</th>
+            <th data-align="center" data-formatter="UserObj.formatter">操作</th>
+        </tr>
+        </thead>
+    </table>
 </div>
-
 <script>
     NProgress.start();
     $(document).ready(function(e){

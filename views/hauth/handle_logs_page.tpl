@@ -14,8 +14,8 @@
     </div>
 </div>
 
-<div class="row">
-    <div id="h-handle-logs" class="col-sm-12 col-md-12 col-lg-12">
+<div class="subsystem-content">
+    <div id="h-handle-logs">
         <table id="HandleLogsPageTable"></table>
     </div>
 </div>

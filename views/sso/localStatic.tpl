@@ -24,30 +24,30 @@
         </button>
     </div>
 </div>
-<div class="row" style="padding-top: 3px;">
-    <div id="h-sso-local-static-content" class="col-sm-12 col-md-12 col-lg-12">
-        <table id="h-sso-local-static-table-info"
-               data-toggle="table"
-               data-striped="true"
-               data-url="/v1/sso/local/static"
-               data-side-pagination="client"
-               data-pagination="true"
-               data-page-size="30"
-               data-page-list="[20,30, 50, 100, 200]"
-               data-search="false">
-            <thead>
-            <tr>
-                <th data-field="state" data-checkbox="true"></th>
-                <th data-field="url">路由地址</th>
-                <th data-field="path">资源本地路径</th>
-                <th data-align="center" data-field="createTime">创建日期</th>
-                <th data-align="center" data-field="createUser">创建人</th>
-                <th data-align="center" data-field="modifyTime">修改日期</th>
-                <th data-align="center" data-field="modifyUser">修改人</th>
-            </tr>
-            </thead>
-        </table>
-    </div>
+<div id="h-sso-local-static-content"
+     class="subsystem-content"
+     style="padding-top: 3px;">
+    <table id="h-sso-local-static-table-info"
+           data-toggle="table"
+           data-striped="true"
+           data-url="/v1/sso/local/static"
+           data-side-pagination="client"
+           data-pagination="true"
+           data-page-size="30"
+           data-page-list="[20,30, 50, 100, 200]"
+           data-search="false">
+        <thead>
+        <tr>
+            <th data-field="state" data-checkbox="true"></th>
+            <th data-field="url">路由地址</th>
+            <th data-field="path">资源本地路径</th>
+            <th data-align="center" data-field="createTime">创建日期</th>
+            <th data-align="center" data-field="createUser">创建人</th>
+            <th data-align="center" data-field="modifyTime">修改日期</th>
+            <th data-align="center" data-field="modifyUser">修改人</th>
+        </tr>
+        </thead>
+    </table>
 </div>
 <script type="text/javascript">
     var CaDriverInfoObj = {

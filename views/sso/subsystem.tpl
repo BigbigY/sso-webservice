@@ -24,35 +24,35 @@
         </button>
     </div>
 </div>
-<div class="row" style="padding-top: 3px;">
-    <div id="h-sso-subsystem-content" class="col-sm-12 col-md-12 col-lg-12">
-        <table id="h-sso-subsystem-table"
-               data-toggle="table"
-               data-striped="true"
-               data-unique-id="serviceCd"
-               data-url="/v1/sso/subsystem"
-               data-side-pagination="client"
-               data-pagination="true"
-               data-page-size="30"
-               data-page-list="[20,30, 50, 100, 200]"
-               data-search="false">
-            <thead>
-            <tr>
-                <th data-field="state" data-checkbox="true"></th>
-                <th data-field="serviceCd">子系统代码</th>
-                <th data-field="serviceName">子系统名称</th>
-                <th data-field="remoteScheme">协议</th>
-                <th data-field="remoteHost">主机名</th>
-                <th data-field="remotePort">端口</th>
-                <th data-field="prefixUrl">基准路径</th>
-                <th data-align="center" data-field="createTime">创建日期</th>
-                <th data-align="center" data-field="createUser">创建人</th>
-                <th data-align="center" data-field="modifyTime">修改日期</th>
-                <th data-align="center" data-field="modifyUser">修改人</th>
-            </tr>
-            </thead>
-        </table>
-    </div>
+<div id="h-sso-subsystem-content"
+     class="subsystem-content"
+     style="padding-top: 3px;">
+    <table id="h-sso-subsystem-table"
+           data-toggle="table"
+           data-striped="true"
+           data-unique-id="serviceCd"
+           data-url="/v1/sso/subsystem"
+           data-side-pagination="client"
+           data-pagination="true"
+           data-page-size="30"
+           data-page-list="[20,30, 50, 100, 200]"
+           data-search="false">
+        <thead>
+        <tr>
+            <th data-field="state" data-checkbox="true"></th>
+            <th data-field="serviceCd">子系统代码</th>
+            <th data-field="serviceName">子系统名称</th>
+            <th data-field="remoteScheme">协议</th>
+            <th data-field="remoteHost">主机名</th>
+            <th data-field="remotePort">端口</th>
+            <th data-field="prefixUrl">基准路径</th>
+            <th data-align="center" data-field="createTime">创建日期</th>
+            <th data-align="center" data-field="createUser">创建人</th>
+            <th data-align="center" data-field="modifyTime">修改日期</th>
+            <th data-align="center" data-field="modifyUser">修改人</th>
+        </tr>
+        </thead>
+    </table>
 </div>
 <script type="text/javascript">
     var CaDriverInfoObj = {

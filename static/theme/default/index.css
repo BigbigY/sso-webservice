@@ -164,3 +164,9 @@
     margin: auto 0px;
     background-color: #fcfcfc;
 }
+
+.subsystem-content{
+    /*border-bottom: solid #e6e6e6 1px;*/
+    width: 100%;
+    margin: 0px 0px;
+}

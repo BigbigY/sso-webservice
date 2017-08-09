@@ -235,6 +235,8 @@
 			</button>
 			<button onclick="changeTheme(1003)" class="btn btn-sm theme-apple-color" style="color: white;">
 			</button>
+			<button onclick="changeTheme(1005)" class="btn btn-sm theme-tradition-color" style="color: white;">
+			</button>
 			<div class="pull-right">
 				<button onclick="changemodifypassword()" class="btn btn-success btn-xs">
 					<i class="icon-wrench"> 修改密码</i>
@@ -280,7 +282,6 @@
 			</tr>
 		</table>
 	</div>
-
 </script>
 <script id="h-user-modify-password" type="text/html">
 	<form id="plat-change-passwd" class="col-sm-12 col-md-12 col-lg-12">
@@ -302,7 +303,7 @@
 		</div>
 	</form>
 </script>
-<script type="text/javascript" src="/static/laydate/laydate.js"></script>
+<script type="text/javascript" src="/static/js/laydate.js"></script>
 <script type="text/javascript" src="/static/js/bootstrap-notify.min.js"></script>
 <script src="/static/js/download.js"></script>
 <script type="text/javascript" src="/static/js/spin.min.js"></script>

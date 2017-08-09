@@ -24,32 +24,32 @@
         </button>
     </div>
 </div>
-<div class="row" style="padding-top: 3px;">
-    <div id="h-sso-proxy-static-content" class="col-sm-12 col-md-12 col-lg-12">
-        <table id="h-sso-proxy-static-table"
-               data-toggle="table"
-               data-striped="true"
-               data-url="/v1/sso/proxy/static"
-               data-side-pagination="client"
-               data-pagination="true"
-               data-page-size="30"
-               data-page-list="[20,30, 50, 100, 200]"
-               data-search="false">
-            <thead>
-            <tr>
-                <th data-field="state" data-checkbox="true"></th>
-                <th data-field="registerUrl">路由地址</th>
-                <th data-field="routeDesc">路由描述</th>
-                <th data-field="serviceCd">子系统编码</th>
-                <th data-field="remoteUrl">映射子系统路由</th>
-                <th data-align="center" data-field="createTime">创建日期</th>
-                <th data-align="center" data-field="createUser">创建人</th>
-                <th data-align="center" data-field="modifyTime">修改日期</th>
-                <th data-align="center" data-field="modifyUser">修改人</th>
-            </tr>
-            </thead>
-        </table>
-    </div>
+<div id="h-sso-proxy-static-content"
+     class="subsystem-content"
+     style="padding-top: 3px;">
+    <table id="h-sso-proxy-static-table"
+           data-toggle="table"
+           data-striped="true"
+           data-url="/v1/sso/proxy/static"
+           data-side-pagination="client"
+           data-pagination="true"
+           data-page-size="30"
+           data-page-list="[20,30, 50, 100, 200]"
+           data-search="false">
+        <thead>
+        <tr>
+            <th data-field="state" data-checkbox="true"></th>
+            <th data-field="registerUrl">路由地址</th>
+            <th data-field="routeDesc">路由描述</th>
+            <th data-field="serviceCd">子系统编码</th>
+            <th data-field="remoteUrl">映射子系统路由</th>
+            <th data-align="center" data-field="createTime">创建日期</th>
+            <th data-align="center" data-field="createUser">创建人</th>
+            <th data-align="center" data-field="modifyTime">修改日期</th>
+            <th data-align="center" data-field="modifyUser">修改人</th>
+        </tr>
+        </thead>
+    </table>
 </div>
 <script type="text/javascript">
     var CaDriverInfoObj = {

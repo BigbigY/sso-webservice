@@ -14,14 +14,11 @@
         </button>
     </div>
 </div>
-<div class="row">
-    <div id="h-domain-info" class="col-sm-12 col-md-12 col-lg-12">
-        <table id="HdomainInfoTable"></table>
-    </div>
+<div class="subsystem-content">
+    <table id="HdomainInfoTable" ></table>
 </div>
 
 <script type="text/javascript">
-
     var DomainObj = {
         getSharePage:function(id,name){
             var name = name+"共享配置"

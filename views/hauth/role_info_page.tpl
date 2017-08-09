@@ -23,42 +23,39 @@
         </button>
     </div>
 </div>
-<div class="row">
-    <div id="h-role-info" class="col-sm-12 col-md-12 col-lg-12">
-        <table id="h-role-info-table-details"
-               data-toggle="table"
-               data-striped="true"
-               data-side-pagination="client"
-               data-pagination="true"
-               data-page-list="[20, 50, 100, 200]"
-               data-search="false">
-            <thead>
-            <tr>
-                <th data-field="state" data-checkbox="true"></th>
-                <th data-field="code_number">角色编码</th>
-                <th data-field="role_name">角色名称</th>
-                <th data-align="center"
-                    data-field="role_status_desc">状态</th>
-                <th data-field="domain_desc">所属域</th>
-                <th data-align="center"
-                    data-field="create_user">创建人</th>
-                <th data-align="center"
-                    data-field="create_date">创建时间</th>
-                <th data-align="center"
-                    data-field="modify_user">修改人</th>
-                <th data-align="center"
-                    data-field="modify_date">修改时间</th>
-                <th data-field="state-handle"
-                    data-align="center"
-                    data-formatter="RoleObj.formatter">资源操作</th>
-            </tr>
-            </thead>
-        </table>
-    </div>
+<div id="h-role-info" class="subsystem-content">
+    <table id="h-role-info-table-details"
+           data-toggle="table"
+           data-striped="true"
+           data-side-pagination="client"
+           data-pagination="true"
+           data-page-list="[20, 50, 100, 200]"
+           data-search="false">
+        <thead>
+        <tr>
+            <th data-field="state" data-checkbox="true"></th>
+            <th data-field="code_number">角色编码</th>
+            <th data-field="role_name">角色名称</th>
+            <th data-align="center"
+                data-field="role_status_desc">状态</th>
+            <th data-field="domain_desc">所属域</th>
+            <th data-align="center"
+                data-field="create_user">创建人</th>
+            <th data-align="center"
+                data-field="create_date">创建时间</th>
+            <th data-align="center"
+                data-field="modify_user">修改人</th>
+            <th data-align="center"
+                data-field="modify_date">修改时间</th>
+            <th data-field="state-handle"
+                data-align="center"
+                data-formatter="RoleObj.formatter">资源操作</th>
+        </tr>
+        </thead>
+    </table>
 </div>
 
 <script>
-
     var RoleObj={
         getResourcePage:function(id,name){
             var name = name+"资源信息"

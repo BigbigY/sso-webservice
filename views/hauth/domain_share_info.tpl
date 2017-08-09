@@ -24,52 +24,54 @@
     </div>
 </div>
 
-<div class="row" style="padding-top: 6px;">
-    <div class="col-sm-12 col-md-5 col-md-3">
-        <div id="h-domain-info-shareid" class="thumbnail">
-            <table class="table table-bordered table-condensed" style="margin-top: 30px;">
-                <tr style="background-color: #009966;color: white;"><th style="text-align: center">字段</th><th style="text-align: center">值</th></tr>
-                <tr style="height: 36px; line-height: 36px;"><td style="text-align: right;padding-right: 15px;vertical-align: middle;">域编码</td>
-                    <td id="h-domain-share-did" style="vertical-align: middle;">{{.Project_id}}</td></tr>
-                <tr style="height: 36px; line-height: 36px;"><td  style="text-align: right;padding-right: 15px; vertical-align: middle;">域描述</td>
-                    <td id="h-domain-share-did-name" style="vertical-align: middle;">{{.Project_name}}</td></tr>
-                <tr style="height: 36px; line-height: 36px;"><td style="text-align: right;padding-right: 15px; vertical-align: middle;">域状态</td>
-                    <td id="h-domain-share-did-status" style="vertical-align: middle;">{{.Project_status}}</td></tr>
-                <tr style="height: 36px; line-height: 36px;"><td style="text-align: right;padding-right: 15px; vertical-align: middle;">创建日期</td>
-                    <td id="h-domain-share-did-create-date" style="vertical-align: middle;">{{.Maintance_date}}</td></tr>
-                <tr style="height: 36px; line-height: 36px;"><td style="text-align: right;padding-right: 15px; vertical-align: middle;">创建人</td>
-                    <td id="h-domain-share-did-create-user" style="vertical-align: middle;">{{.User_id}}</td></tr>
-                <tr style="height: 36px; line-height: 36px;"><td style="text-align: right;padding-right: 15px; vertical-align: middle;">修改日期</td>
-                    <td id="h-domain-share-did-modify-date" style="vertical-align: middle;">{{.Domain_maintance_date}}</td></tr>
-                <tr style="height: 36px; line-height: 36px;"><td style="text-align: right;padding-right: 15px; vertical-align: middle;">修改人</td>
-                    <td id="h-domain-share-did-modify-user" style="vertical-align: middle;">{{.Domain_maintance_user}}</td></tr>
+<div class="subsystem-content" style="padding-top: 3px;">
+    <div class="row">
+        <div class="col-sm-12 col-md-5 col-md-3">
+            <div id="h-domain-info-shareid" class="thumbnail">
+                <table class="table table-bordered table-condensed" style="margin-top: 30px;">
+                    <tr style="background-color: #009966;color: white;"><th style="text-align: center">字段</th><th style="text-align: center">值</th></tr>
+                    <tr style="height: 36px; line-height: 36px;"><td style="text-align: right;padding-right: 15px;vertical-align: middle;">域编码</td>
+                        <td id="h-domain-share-did" style="vertical-align: middle;">{{.Project_id}}</td></tr>
+                    <tr style="height: 36px; line-height: 36px;"><td  style="text-align: right;padding-right: 15px; vertical-align: middle;">域描述</td>
+                        <td id="h-domain-share-did-name" style="vertical-align: middle;">{{.Project_name}}</td></tr>
+                    <tr style="height: 36px; line-height: 36px;"><td style="text-align: right;padding-right: 15px; vertical-align: middle;">域状态</td>
+                        <td id="h-domain-share-did-status" style="vertical-align: middle;">{{.Project_status}}</td></tr>
+                    <tr style="height: 36px; line-height: 36px;"><td style="text-align: right;padding-right: 15px; vertical-align: middle;">创建日期</td>
+                        <td id="h-domain-share-did-create-date" style="vertical-align: middle;">{{.Maintance_date}}</td></tr>
+                    <tr style="height: 36px; line-height: 36px;"><td style="text-align: right;padding-right: 15px; vertical-align: middle;">创建人</td>
+                        <td id="h-domain-share-did-create-user" style="vertical-align: middle;">{{.User_id}}</td></tr>
+                    <tr style="height: 36px; line-height: 36px;"><td style="text-align: right;padding-right: 15px; vertical-align: middle;">修改日期</td>
+                        <td id="h-domain-share-did-modify-date" style="vertical-align: middle;">{{.Domain_maintance_date}}</td></tr>
+                    <tr style="height: 36px; line-height: 36px;"><td style="text-align: right;padding-right: 15px; vertical-align: middle;">修改人</td>
+                        <td id="h-domain-share-did-modify-user" style="vertical-align: middle;">{{.Domain_maintance_user}}</td></tr>
+                </table>
+            </div>
+        </div>
+        <div id="h-domain-share-info-details"
+             class="col-sm-12 col-md-7 col-lg-9"
+             style="padding-left: 0px;">
+            <table id="h-domain-share-info-table"
+                   data-toggle="table"
+                   data-side-pagination="client"
+                   data-pagination="true"
+                   data-striped="true"
+                   data-url="/v1/auth/domain/share/get"
+                   data-page-list="[20, 50, 100, 200]"
+                   data-search="false">
+                <thead>
+                <tr>
+                    <th data-field="state" data-checkbox="true"></th>
+                    <th data-align="center" data-field="target_domain_id">域编码</th>
+                    <th data-field="domain_name">域描述</th>
+                    <th data-align="center" data-field="create_date">创建日期</th>
+                    <th data-align="center" data-field="create_user">创建人</th>
+                    <th data-align="center" data-field="modify_date">修改日期</th>
+                    <th data-align="center" data-field="modify_user">修改人</th>
+                    <th data-align="center" data-field="authorization_level" data-formatter="DomainShareObj.authformatter">共享模式</th>
+                </tr>
+                </thead>
             </table>
         </div>
-    </div>
-    <div id="h-domain-share-info-details"
-         class="col-sm-12 col-md-7 col-lg-9"
-         style="padding-left: 0px;">
-        <table id="h-domain-share-info-table"
-               data-toggle="table"
-               data-side-pagination="client"
-               data-pagination="true"
-               data-striped="true"
-               data-url="/v1/auth/domain/share/get"
-               data-page-list="[20, 50, 100, 200]"
-               data-search="false">
-            <thead>
-            <tr>
-                <th data-field="state" data-checkbox="true"></th>
-                <th data-align="center" data-field="target_domain_id">域编码</th>
-                <th data-field="domain_name">域描述</th>
-                <th data-align="center" data-field="create_date">创建日期</th>
-                <th data-align="center" data-field="create_user">创建人</th>
-                <th data-align="center" data-field="modify_date">修改日期</th>
-                <th data-align="center" data-field="modify_user">修改人</th>
-                <th data-align="center" data-field="authorization_level" data-formatter="DomainShareObj.authformatter">共享模式</th>
-            </tr>
-            </thead>
-        </table>
     </div>
 </div>
 <script>

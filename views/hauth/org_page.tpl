@@ -29,51 +29,53 @@
         </button>
     </div>
 </div>
-<div class="row" style="padding-top: 6px;">
-    <div class="col-sm-12 col-md-5 col-lg-3">
-        <div id="h-org-tree-info" class="thumbnail">
-            <div class="col-ms-12 col-md-12 col-lg-12">
-                <div style="border-bottom: #598f56 solid 1px;height: 44px; line-height: 44px;">
-                    <div class="pull-left">
-                        <span><i class="icon-sitemap"> </i>组织架构树</span>
-                    </div>
-                    <div class="pull-right">
+<div class="subsystem-content" style="padding-top: 3px;">
+    <div class="row">
+        <div class="col-sm-12 col-md-5 col-lg-3">
+            <div id="h-org-tree-info" class="thumbnail">
+                <div class="col-ms-12 col-md-12 col-lg-12">
+                    <div style="border-bottom: #598f56 solid 1px;height: 44px; line-height: 44px;">
+                        <div class="pull-left">
+                            <span><i class="icon-sitemap"> </i>组织架构树</span>
+                        </div>
+                        <div class="pull-right">
                         <span>
                             <i class=" icon-search" style="margin-top: 15px;"></i>&nbsp;
                     </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="h-org-tree-info-list" class="col-sm-12 col-md-12 col-lg-12"
-                 style="padding:15px 5px;overflow: auto">
+                <div id="h-org-tree-info-list" class="col-sm-12 col-md-12 col-lg-12"
+                     style="padding:15px 5px;overflow: auto">
 
+                </div>
             </div>
         </div>
-    </div>
-    <div id="h-org-table-info" class="col-sm-12 col-md-7 col-lg-9" style="padding-left: 0px;">
-        <table id="h-org-info-table-details"
-               data-toggle="table"
-               data-striped="true"
-               data-unique-id="org_id"
-               data-url="/v1/auth/resource/org/get"
-               data-side-pagination="client"
-               data-pagination="true"
-               data-page-size="20"
-               data-page-list="[20, 50, 100, 200]"
-               data-search="false">
-            <thead>
-            <tr>
-                <th data-field="state" data-checkbox="true"></th>
-                <th data-field="code_number">机构编码</th>
-                <th data-field="org_desc">机构描述</th>
-                <th data-field="up_org_id" data-formatter="OrgObj.upOrgId">上级机构编码</th>
-                <th data-align="center" data-field="create_date">创建日期</th>
-                <th data-align="center" data-field="create_user">创建人</th>
-                <th data-align="center" data-field="modify_date">修改日期</th>
-                <th data-align="center" data-field="modify_user">修改人</th>
-            </tr>
-            </thead>
-        </table>
+        <div id="h-org-table-info" class="col-sm-12 col-md-7 col-lg-9" style="padding-left: 0px;">
+            <table id="h-org-info-table-details"
+                   data-toggle="table"
+                   data-striped="true"
+                   data-unique-id="org_id"
+                   data-url="/v1/auth/resource/org/get"
+                   data-side-pagination="client"
+                   data-pagination="true"
+                   data-page-size="20"
+                   data-page-list="[20, 50, 100, 200]"
+                   data-search="false">
+                <thead>
+                <tr>
+                    <th data-field="state" data-checkbox="true"></th>
+                    <th data-field="code_number">机构编码</th>
+                    <th data-field="org_desc">机构描述</th>
+                    <th data-field="up_org_id" data-formatter="OrgObj.upOrgId">上级机构编码</th>
+                    <th data-align="center" data-field="create_date">创建日期</th>
+                    <th data-align="center" data-field="create_user">创建人</th>
+                    <th data-align="center" data-field="modify_date">修改日期</th>
+                    <th data-align="center" data-field="modify_user">修改人</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
     </div>
 </div>
 <script type="text/javascript">
